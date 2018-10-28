@@ -4,7 +4,7 @@ A http proxy that can relay requests to servers and the respective responses to 
 Its a program for a simple HTTP proxy. Written for Linux. Uses pthread library and the unix/linux sockets API. Below is a description of the program.
 
 
---- A Note : One function, serve_from_cache() in mediator.cpp has not yet been implemented yet. But, intend to do it soon. ---
+--- A Note : One function, serve_from_cache() in mediator.cpp has not yet been implemented yet. But, intend to do it soon. So, for now, the proxy cannot store a cache of the resources received from server. But, have written dome data structures to handle the same. ---
 
 The different files and their roles : 
  - proxy_srv1.cpp : This contains main(). It implements a concurrent server on the user given interface and port. It starts a thread for every client connection request received using the accept() system call.
