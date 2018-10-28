@@ -1,0 +1,14 @@
+server :
+
+g++ -pthread error_functions.cpp proxy_srv1.cpp csapp.h open_listenfd.cpp open_clientfd.cpp RIO.cpp hostmap.cpp resmap.cpp mediator.cpp content_cacher.cpp content_cacher.h -g -o ps1
+
+sudo ./ps1 127.0.0.1 80
+
+
+------------
+
+client :
+
+g++ error_functions.cpp echo_cli.cpp csapp.h open_clientfd.cpp RIO.cpp -o ec1
+
+./ec1 127.0.0.1 80
